@@ -13,8 +13,8 @@ using LightGraphs
 using Metaheuristics
 using SignalAnalysis
 using SpikeNN
-#include("current_search.jl")
-#include("utils.jl")
-#include("sdo_network.jl")
+include("current_search.jl")
+include("utils.jl")
+include("sdo_network.jl")
 
 end

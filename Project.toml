@@ -4,6 +4,8 @@ version = "0.1.0"
 
 [deps]
 Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
 LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
@@ -14,8 +16,33 @@ PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
+Metaheuristics = "bcdb8e00-2c21-11e9-3065-2b553b22f898"
+SpikingNN 
 
 [compat]
-UnicodePlots = "1.3.0"
 julia = "1.5.3 - 1.6.2"
+Conda = "1.5.3 - 1.6.0"
+DataStructures = "0.10.0 - 0.18.11"
+SpikingNeuralNetworks = "0.1.0"
+Metaheuristics = "1.6.2 - 3.1.1"
+LightGraphs = "0.2.3 - 1.3.5"
+JLD = ">= 0.10.0"
+Distributions = ">= 0.25.37"
+OrderedCollections = ">=0.12.3"
+#PyCall =
+
+
+#utoMerge/guidelines.jl:134
+#┌ Error: Dependency "DataStructures" does not have a compat entry that has an upper bound
+#└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "UnPack" does not have a compat entry that has an upper bound
+#└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "Parameters" does not have a compat entry that has an upper bound
+#└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "UnicodePlots" does not have a compat entry that has an upper bound
+#└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "Evolutionary" does not have a compat entry that has an upper bound
+#└ @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "SpikeSynchrony" does not have a compat entry that has an upper bound
+# @ RegistryCI.AutoMerge ~/.julia/packages/RegistryCI/Nj1Mv/src/AutoMerge/guidelines.jl:134
+#┌ Error: Dependency "SpikingNeuralNetworks" does not have a compat entry that has an upper bound
