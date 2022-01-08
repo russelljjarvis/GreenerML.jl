@@ -1,4 +1,4 @@
-#using ClearStacktrace
+
 using Plots
 using JLD
 using Test
@@ -8,17 +8,6 @@ using Revise
 unicodeplots()
 
 const net_size = 50
-#struct SquareWave{T<:Real} <: AbstractInput
-#    τ::T
-#end
-
-#SpikingNN.evaluate!(input:: SquareWave, t::Integer; dt::Real = 1.0) =
-#    (mod(t, ceil(Int, input.τ / dt)) * dt < input.τ / 2) ? t : zero(t)
-#(input:: SquareWave)(t::Integer; dt::Real = 1.0) = SpikingNN.evaluate!(input, t; dt = dt)
-#SpikingNN.evaluate!(inputs::T, t::Integer; dt::Real = 1.0) where T<:AbstractArray{<: SquareWave} =
-#    ifelse.(mod.(t, ceil.(Int, inputs.τ ./ dt)) .* dt .< inputs.τ ./ 2, t, zero(t))
-#sw = SpikingNN.SquareWave(200)
-#=
 struct SquareWave{T<:Real} <: AbstractInput
     τ::T
     amp::T
@@ -35,7 +24,7 @@ end
 function SpikingNN.evaluate!(inputs::T, t::Integer; dt::Real = 1.0) where T<:AbstractArray{<: SquareWave}
     ifelse.(mod.(t, ceil.(Int, inputs.τ ./ dt)) .* dt .< inputs.τ ./ 2, t, zero(t))
 end
-=#
+
 function get_constant_gw()
     ##
     # Load a connectome from disk.
